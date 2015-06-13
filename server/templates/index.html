@@ -1,0 +1,162 @@
+<html>
+<meta charset="utf-8">
+
+<body>
+<script src="static/js/resourse/d3.js"></script>
+<script type='text/javascript' src="static/js/resourse/d3.tip.v0.6.3.js"> </script>
+<script src="static/js/datos.js"></script>
+<script src="static/js/config.js"></script>
+<script src="static/js/informacion.js"></script>
+<script src="static/js/estilos.js"></script>
+
+
+ <script src="static/js/resourse/jquery-2.1.3.js"></script>
+<LINK rel="stylesheet" href="static/css/resourse/bootstrap.css">
+<script src="static/js/resourse/bootstrap.js"></script>
+<LINK rel="stylesheet" href="static/css/resourse/bootstrap-popover-x.css">
+<script src="static/js/resourse/bootstrap-popover-x.js"></script>
+
+<script src="static/js/resourse/bootstrap-modal-popover.js"></script>
+<link rel="stylesheet" href="static/css/EstiloGrafi.css">
+
+
+
+<script src="static/js/cierre3.js"></script>
+
+<h4>FACETADO GLOBAL</h4>
+
+<div class="panel-group" id="accordion2" style="width:65%; float:left; padding-left:30px;">
+  <div  class="panel panel-default">
+    <div id="titnodos" class="panel-heading"role="tab" >
+      <a  class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        TIPOS DE NODOS
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="panel-body"  id="mi_div">
+	  
+      </div>
+	 
+    </div>
+  </div>
+ 
+<div class="panel panel-default">
+    <div class="panel-heading"role="tab">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+	  
+        TIPOS DE RELACIONES
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="panel-body" id="mi_div2">
+
+      </div>
+    </div>
+  </div>
+ </div>
+
+ 
+<div class="col-xs-3" >
+<div class="input-group" id="empezar">
+<input id="Buscador" type="text" class="form-control" aria-label="...">
+  <div class="input-group-btn ">
+    <!-- Button and dropdown menu -->
+	 <button class="btn btn-default"  type="button"  id="PrimerNodo">Buscar</button>
+	 <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" >
+	 <span class="caret"></span>
+	 <span class="sr-only">Toggle Dropdown</span> 
+	 </button>
+	 <ul class="dropdown-menu" role="menu">
+          <li><a href="#" id="provincia" name="Provincia">Provincia</a></li>
+          <li><a href="#" id="canton" name="Canton">Cantón</a></li>
+          <li><a href="#" id="lengua" name="Lengua">Lengua</a></li>
+          <li class="divider"></li>
+          <li><a href="#" id="idnodo">ID Nodo</a></li>
+        </ul>
+  </div>
+  
+</div>
+
+</div>
+
+
+
+<script src="static/js/tiposRelaciones.js"></script>
+<script src="static/js/TiposNodos.js"></script>
+
+<script src="static/js/Nodos.js"></script>
+<script src="static/js/funciones.js"></script>
+<script src="static/js/numVecinos.js"></script> 
+<script src="static/js/neoPedro.js"></script>
+<script src="static/js/funcionesBotones.js"></script>
+<script src="static/js/PrimerNodo.js"></script>
+
+
+
+
+ <!--<div id="popover_content"  >
+   <div class="arrow"></div>
+  <div class="popover-header">
+  <button type="button" class="close" data-dismiss="popover" aria-hidden="true">&times;</button>
+   <h4 class="popover-title" id="myModalLabel"></h4>
+    </div>
+    <div class="popover-content"> 
+
+      <div id="mi_div6" ></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div>
+    </div> 
+  </div> -->
+
+
+
+
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div id="mi_div6" class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="facetadoLocal" aria-hidden="true" id="popmodal">
+<div class="modal-dialog modal-sm">
+ <div class="modal-content">
+         <div class="modal-header">
+		 <h3 class="modal-title" id="facetadoLocal">FACETADO LOCAL</h3>
+
+<div id='loader1'><img  src='static/img/loading.gif'></div><select style='display:none' id='mi_div3' ></select>
+	<div style='display:none' id='loader2'><img  src='static/img/loader.gif'></div></br><select style='display:none' id='miselec'></select>
+		<div style='display:none' id='loader3'><img  src='static/img/loader.gif'></div><div style='display:none' id='mi_div5'></div>
+			</br></br><div class="modal-footer">
+        <button style='display:none' type='button' id='btnSubmitL' value='Vecinos'  class="btn btn-default" data-dismiss="modal">Vecinos</button>
+      </div>
+</div></div>
+</div></div>
+
+
+
+
+
+<script src="static/js/vecinosLocal.js"></script>
+<script src="static/js/abrirVecinos.js"></script>
+<script src="static/js/facetadoLocal2.js"></script>
+<script src="static/js/vecinosMenores.js"></script>
+<script src="static/js/tipoRelaLocales.js"></script>
+<script src="static/js/relacionesLocales.js"></script>
+<script src="static/js/cerrarVecinos.js"></script>
+
+
+</body>
+</html>

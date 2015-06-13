@@ -1,0 +1,61 @@
+.svg-tam{
+width:100%;
+height:115%;
+}
+
+.d3-tip {
+    cursor: pointer;
+    line-height: 1;
+    color: black;
+}
+.node {
+
+    stroke: #fff;
+    stroke-width: 1.5px;
+	}
+	
+.link{
+/* fill: none; */
+  stroke: #999;
+  stroke-width: 1.5 px;
+  /* stroke: #999; */
+  /* stroke-width: 1; */
+  stroke-opacity: .6;
+}
+.icono{
+width:15px;
+height:15px;
+}
+
+.d3-tip {
+  /* font: 13px ; */
+  /* width:200px; */
+  /* line-height: 1.5; */
+  /* font-weight: bold; */
+  /* padding: 4px;  */
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+}
+.d3-tip2 {
+  position: absolute;
+  padding-left: 80px;
+}
+
+.seleccionable {
+width:150px;
+float: left;
+padding-bottom:7px;
+}
+
+.seleccionableL {
+float: initial;
+padding-bottom:7px;
+margin-left: 60px; 
+}
+.seleccionableR {
+width:250px;
+float: left;
+padding-bottom:7px;
+
+}
