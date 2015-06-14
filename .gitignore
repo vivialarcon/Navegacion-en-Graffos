@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 server/credenciales.py
-server/prueba.py
+
 server/credenciales.pyc
 # C extensions
 *.so
