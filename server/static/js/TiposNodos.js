@@ -7,7 +7,7 @@ var consulta2 =
 	};
 
 	$.ajax({
-       async: false, 
+       async: true, 
        type: "POST",
        url: enlace,
        data: JSON.stringify(consulta2),
@@ -22,14 +22,14 @@ var consulta2 =
 				t={label:data.data[i][0][0]};
 				tiposNodes.push(t);
 			}
+			
 	
 			for (j = 0; j < tiposNodes.length; j++) { 
 				$( "#mi_div" ).append( "<div class='seleccionable'> <input  type='checkbox' id="+j+" checked >" +tiposNodes[j].label+"</div>"   );
 				
 			}
-		//$( "#mi_div" ).append(" </br></br></br></br></br></br></br></br></br>");
-	 
-		   
+			guias();
+   
        },
        error: function( xhr ) {
 		   print('error retrieving schema');

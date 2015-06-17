@@ -10,7 +10,7 @@ var consulta3 =
 	};
 
 	$.ajax({
-       async: false, 
+       async: true, 
        type: "POST",
        url: enlace,
        data: JSON.stringify(consulta3),

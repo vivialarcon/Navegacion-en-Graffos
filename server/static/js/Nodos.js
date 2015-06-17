@@ -64,12 +64,7 @@ var tip2 = d3.tip()
 })
 vis.call(tip2);
          
-var guia = vis.selectAll("circle.guia")
-	  .data(tiposNodes)
-	  .enter().append("g")
-	   .on("mouseover", tip2.show)
-     .on("mouseout", tip2.hide)  
-	 
+
 
  var node = vis.selectAll("circle.node")
       .data(nodes)
@@ -96,18 +91,21 @@ var link = vis.append("g").selectAll(".link")
         .style("marker-end", "url(#end)");
 	 
 
-	  
-
-guia.append("svg:circle")
+function guias(){
+	
+	var guia = vis.selectAll("circle.guia")
+	  .data(tiposNodes)
+	  .enter()
+	  .append("svg:circle")
 	  .attr("r",circleWidth)
 	  .attr("fill",function(d,i) {return color(d.label)})
 	  .attr("cx", function(d,i) { return (i*30)+20})
-      .attr("cy", 30);
-	 
-	  
+      .attr("cy", 30)
+	  .on("mouseover", tip2.show)
+      .on("mouseout", tip2.hide)  
 
-	  
-	  
+	  }	 	  
+ 
 	 
 force.on("tick", function(e) {
 
