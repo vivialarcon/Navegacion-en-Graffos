@@ -55,7 +55,7 @@ $("#myModalLabel").empty();
 		}
 	}
 	// return datosNodo.join("\n");
-	$( "#mi_div6" ).append( "<img src='static/img/GENERAL.jpg' >"  );
+	$( "#mi_div6" ).append( "<img src='../static/img/GENERAL.jpg' >"  );
 
 }
 function ocultarInfo(d){

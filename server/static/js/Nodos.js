@@ -46,7 +46,7 @@ var tip = d3.tip()
 	function(d){
 	var titulo=datosNodo.join();
 	titulo= titulo.substring(0,10);
-		return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='img/Icono_información.png' class='icono' >"+titulo+"... </button>";
+		return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='../static/img/Icono_información.png' class='icono' >"+titulo+"... </button>";
 	}
 	)
 vis.call(tip);

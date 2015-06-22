@@ -1,3 +1,4 @@
+/*tamaño del svg para que se adapte al tamaño de la pantalla*/
 .svg-tam{
 width:100%;
 height:115%;
@@ -41,18 +42,14 @@ height:15px;
   position: absolute;
   padding-left: 80px;
 }
-
+/*estilo para div de tipos de nodos*/
 .seleccionable {
 width:150px;
 float: left;
 padding-bottom:7px;
 }
 
-.seleccionableL {
-float: initial;
-padding-bottom:7px;
-margin-left: 60px; 
-}
+/*estilo para div de tipos de relaciones*/
 .seleccionableR {
 width:250px;
 float: left;
