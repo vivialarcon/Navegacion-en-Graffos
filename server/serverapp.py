@@ -15,9 +15,9 @@ def principal():
 def peticion():
     #print request.data
     print "Hola"
-    r= requests.post('http://localhost:9014/db/data/cypher',request.data, auth=(user,passw))
+    r= requests.post('http://0.0.0.0:9014/db/data/cypher',request.data, auth=(user,passw))
     print r.json()
     return r.text
 	
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=8000)
