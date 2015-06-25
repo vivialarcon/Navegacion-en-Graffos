@@ -1,3 +1,4 @@
+// las funciones PrimerNodo y Nodo1 llaman al primer nodo que pide el usuario mediante la busqueda 
 
 function PrimerNodo(nodoini){
 var consulta4 = 

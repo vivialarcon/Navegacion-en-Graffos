@@ -1,4 +1,6 @@
-	 
+
+//Esta funcion es llamada para abrir el facetado local cuando el numero de nodos es mayor a lo establecido 
+//Obtiene todos los tipos de nodos vecinos y el numero de vecinos que tiene cada tipo 	 
 function FacetadoLocal(sid){
 
 var consulta6 = 
@@ -33,6 +35,8 @@ var consulta6 =
 		$("#miselec").empty();
 		$("#mi_div5").empty();
 		$( "#mi_div3" ).append( " <option value='vaciop'>...</option>");
+		
+		//Rellena el select con todos los tipos de vecinos y el numero de nodos que tiene cada uno
 		for (j = 0; j < tiposLocal.length; j++) { 
 		
 			$( "#mi_div3" ).append( " <option name='"+tiposLocal[j].nume+"' value='"+tiposLocal[j].tipo+"' >" +tiposLocal[j].tipo+" ("+tiposLocal[j].nume+" nodos) </option>");
@@ -42,6 +46,8 @@ var consulta6 =
 		$("#loader1").hide();
 		
 		sidClick=sid;
+		
+		//Detecta si se elige una opción del select y obtenemos los atributos
 		$("#mi_div3").change(function() {
 		$("#loader2").show();
 			if($("#mi_div3 option:selected").val()!= 'vaciop'){
@@ -50,11 +56,14 @@ var consulta6 =
 				$("#miselec").empty();
 				numveci=parseInt($("#mi_div3 option:selected").attr('name'));
 				
+				//Si el tipo de nodo elegido tiene un numero menor de nodos al máximo entonces se abren los nodos vecinos del tipo escogido
 				if(numveci<=totalimite){
 
 					VecinosMenor(sidClick);
 					$("#mi_div3").empty();
 				}
+				
+				//Si el número de nodos es mayor entonces llamamos a tiporelaLocales para obtener el siguiente nivel de filtrado
 				else{
 				 
 				tiporelaLocales(sidClick);

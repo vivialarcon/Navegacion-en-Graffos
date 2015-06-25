@@ -23,6 +23,7 @@ height:115%;
   /* stroke-width: 1; */
   stroke-opacity: .6;
 }
+/*icono de informacion*/
 .icono{
 width:15px;
 height:15px;
@@ -38,6 +39,7 @@ height:15px;
   color: #fff;
   border-radius: 10px;
 }
+/*tooltip nodos guias*/
 .d3-tip2 {
   position: absolute;
   padding-left: 80px;

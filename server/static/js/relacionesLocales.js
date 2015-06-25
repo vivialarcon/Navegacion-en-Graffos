@@ -1,4 +1,5 @@
 
+//Esta consulta obtiene los distintos nodos vecinos del vecinos que tengan la relacion elegida y el número de relaciones que tiene 
 function relacionesLocales(sid){
 var consulta9 = 
 	{
@@ -35,10 +36,13 @@ var consulta9 =
 		
 		$("#mi_div5").empty();
 		
+		
+		//Muestra en pantalla todos los distintos nodos con su respectivo número de relaciones junto con checkbox 
 		for(c=0; c<nodob.length; c++){
 		
 			$( "#mi_div5" ).append( "<div> <input type='checkbox' id="+c+"nrl name='"+nodob[c][etiqueta[nombreb]]+"' value='"+numrelaciones[c]+"' >"+nodob[c][etiqueta[nombreb]]+" tiene: "+numrelaciones[c]+" nodos relacionados </div>"   );
 			
+	//Verifica si cada checkbox esta en check o no y los cuenta, de acuerdo a eso es el numero de consultas que se van a realizar con sus respectivos datos 
 			$('#'+c+'nrl').click(function(){
 				contar=$(this);
 				if(contar.is(":checked")){
@@ -54,15 +58,22 @@ var consulta9 =
 		
 			});
 		}
+		
+		
 		$("#loader3").hide();
 		$("#mi_div5").show();
 		$('#btnSubmitL').show();
+		
+		//Al dar click sobre el botón vecinos 
 		$('#btnSubmitL').click(function() { 
+		//Si el nodo pulsado tiene nodos vecinos abiertos los cierra para abrir los nuevos 
 			 borrar = [];
 			borrarVecinos=[];
 			borrarLinks=[];
 			cerrarVecinos(pulsa,false);
 			
+			//divide el limite de nodos que se pueden visualizar para el numero de consultas que se van a realizar 
+			//para que cada seleccion tenga el mismo numero de nodos vecinos 
 			consulReal=0;
 			limite=Math.ceil(totalimite/numConsultas);
 
@@ -74,8 +85,10 @@ var consulta9 =
 				var localb = $('#'+j+'nrl').is(":checked");
 				localbthis=$('#'+j+'nrl');
 				
+				//Si el checkbox esta en check se obtiene el numero de nodos relacionados
 				if(localb){
 					numnodos=parseInt(localbthis.attr('value'));
+					//Si el numero de nodos relacionados es mayor al limite se mostraran los nodos desde una posicion aleatoria
 					if(numnodos > totalimite){
 						rando = Math.floor(Math.random() * (numnodos));
 						if(rando > numnodos - totalimite){
@@ -99,6 +112,7 @@ var consulta9 =
 					
 			}
 
+			//de acuerdo al numero de checkbox que se encuentren en check se realizara el llamado de la funcion VecinosLocales con sus respectivos datos 
 			for(k=0; k<nombresNodosb.length; k++){
 		
 				nodoveci=nombresNodosb[k].nodob;

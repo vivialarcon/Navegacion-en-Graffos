@@ -1,3 +1,5 @@
+
+//Esta funcion se llama por cada checkbox en check y la consulta devuelve los nodos que cumplan con los datos que se dan en la consulta 
 function VecinosLocales(sid){
 
 var consulta7 = 

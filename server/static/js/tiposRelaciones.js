@@ -1,7 +1,5 @@
 
-// enlace="http://200.93.225.47:9014/db/data/cypher"
-// enlace="/peticion"
-enlace="http://localhost:7474/db/data/cypher"
+//Se obtiene todos los tipos de relaciones que contiene la base de datos y los muestra junto a un checkbox para el facetado global 
 var consulta3 = 
 	{
 	  "query" : "START r=rel(*) return distinct(type(r))",

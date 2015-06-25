@@ -2,14 +2,17 @@
 <meta charset="utf-8">
 
 <body>
+<!-- librerias -->
 <script src="../static/js/resourse/d3.js"></script>
 <script type='text/javascript' src="../static/js/resourse/d3.tip.v0.6.3.js"> </script>
 <script src="../static/js/datos.js"></script>
+<!-- configuración de datos  -->
 <script src="../static/js/config.js"></script>
+<!-- información del nodo para visualizar en el modal  -->
 <script src="../static/js/informacion.js"></script>
 <script src="../static/js/estilos.js"></script>
 
-
+<!-- librerias de estilos -->
  <script src="../static/js/resourse/jquery-2.1.3.js"></script>
 <LINK rel="stylesheet" href="../static/css/resourse/bootstrap.css">
 <script src="../static/js/resourse/bootstrap.js"></script>
@@ -23,6 +26,7 @@
 
 <script src="../static/js/cierre3.js"></script>
 
+<!-- collapse del facetado global -->
 <h4>FACETADO GLOBAL</h4>
 
 <div class="panel-group" id="accordion2" style="width:65%; float:left; padding-left:30px;">
@@ -55,7 +59,7 @@
   </div>
  </div>
 
- 
+ <!-- textbox, botón y dropdown para la busqueda inicial de nodo -->
 <div class="col-xs-3" >
 <div class="input-group" id="empezar">
 <input id="Buscador" type="text" class="form-control" aria-label="...">
@@ -87,7 +91,7 @@
 <script src="../static/js/Nodos.js"></script>
 <script src="../static/js/funciones.js"></script>
 <script src="../static/js/numVecinos.js"></script> 
-<script src="../static/js/neoPedro.js"></script>
+<script src="../static/js/PedirVecinos.js"></script>
 <script src="../static/js/funcionesBotones.js"></script>
 <script src="../static/js/PrimerNodo.js"></script>
 
@@ -111,7 +115,7 @@
 
 
 
-
+<!-- modal que muestra la informacion extendida de los nodos -->
  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -130,6 +134,7 @@
 </div> 
 
 
+<!-- modal temporal para el facetado local -->
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="facetadoLocal" aria-hidden="true" id="popmodal">
 <div class="modal-dialog modal-sm">
  <div class="modal-content">

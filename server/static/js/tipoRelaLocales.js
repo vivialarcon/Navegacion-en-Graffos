@@ -1,3 +1,7 @@
+
+//Esta función es llamada una vez elegido un tipo de nodo vecino que tenga mas vecinos de los definido como máximo
+// La consulta realizada nos devuelve el tipo de relaciones que tienen los vecinos de acuerdo al tipo escogido 
+
 function tiporelaLocales(sid){
 var consulta8 = 
 	{
@@ -32,7 +36,7 @@ var consulta8 =
 		}
 		$("#miselec").empty();
 		
-		
+		//Rellena el select con los tipos de relaciones que tiene el tipo de nodo 
 		$( "#miselec" ).append( " <option value='vacio'>...</option>");
 		for(c=0; c<relacionxb.length; c++){
 		
@@ -44,6 +48,8 @@ var consulta8 =
 		aplastado=sid;
 		
 		
+		//Al seleccionar un tipo de relacion me obtiene los atributos y llama a la función relacionesLocales 
+		//para desplegar los nodos vecinos que tiene el vecino con la relacion elegida
 		$("#miselec").change(function() {
 		$("#loader3").show();
 			if($("#miselec option:selected").val()!= 'vacio'){

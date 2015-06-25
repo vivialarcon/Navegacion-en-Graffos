@@ -17,7 +17,7 @@ var force = d3.layout.force()
     .size([w, h]);
 	
 					
-
+// Flechas para la direccion de las relaciones
 
 	vis.append("svg:defs")
                     .selectAll("marker")
@@ -37,17 +37,23 @@ var force = d3.layout.force()
                     // .attr("d", "M0,-5L10,0L0,5");
 
 
-		
+//tooltip en los nodos 		
 var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([0, 7])
     .html(
-	// label
-	function(d){
-	var titulo=datosNodo.join();
+	function(){
+	var titulo=label;
+	//limita la cantidad de caracteres que se muestran de la variable
 	titulo= titulo.substring(0,10);
+	//muestra el nombre del nodo en un boton junto con icono de informacion 
 		return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='../static/img/Icono_información.png' class='icono' >"+titulo+"... </button>";
-	}
+}
+	// function(d){
+	// var titulo=datosNodo.join();
+	// titulo= titulo.substring(0,10);
+		// return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='../static/img/Icono_información.png' class='icono' >"+titulo+"... </button>";
+	// }
 	)
 vis.call(tip);
 
@@ -55,7 +61,7 @@ vis.call(tip);
  
 
 	
-	
+//tooltip para los nodos guias 	
 var tip2 = d3.tip()
     .attr('class', 'd3-tip2')
     .offset([-7, 0])
@@ -65,7 +71,7 @@ var tip2 = d3.tip()
 vis.call(tip2);
          
 
-
+// se crea el nodo con la informacion que esta en nodes y los agrega al grupo g 
  var node = vis.selectAll("circle.node")
       .data(nodes)
       .enter()
@@ -75,14 +81,14 @@ vis.call(tip2);
 	  
       .call(force.drag);
 
-    //CIRCLE
+    //CIRCLE y sus atributos 
    node.append("svg:circle")
      .attr("r", circleWidth)
 	 .style("cursor","pointer")
      .attr("fill", function(d, i) {  return  color(d.label);  } )
 	 
 	
-	 
+	 // se crea las relaciones con su estilo
 var link = vis.append("g").selectAll(".link")
         .data(links)
        .enter().append("line")
@@ -90,7 +96,7 @@ var link = vis.append("g").selectAll(".link")
 		//.style("stroke-width", function(d) { return Math.sqrt(d.value); });
         .style("marker-end", "url(#end)");
 	 
-
+// se crea nodos guias con sus atributos 
 function guias(){
 	
 	var guia = vis.selectAll("circle.guia")

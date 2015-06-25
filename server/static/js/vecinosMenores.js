@@ -1,3 +1,5 @@
+//esta función es llamada despues de la primera seleccion en el facetado local 
+//al elegir un tipo de nodo vecino que tenga igual o menos vecinos que el limite definido.
 
 function VecinosMenor(sid){
 

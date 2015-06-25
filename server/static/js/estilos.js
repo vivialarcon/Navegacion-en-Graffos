@@ -1,12 +1,14 @@
 var w = 1500,
     h = 650;
-	
+
+//Radio de nodos
 var circleWidth = 10;
 
 var fontFamily = 'Bree Serif',
     fontSizeHighlight = '1.5em',
     fontSizeNormal = '1em';
 
+// Gama de colores
 var palette = {
       "lightgray": "#819090",
       "gray": "#708284",

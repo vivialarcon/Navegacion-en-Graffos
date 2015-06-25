@@ -1,6 +1,8 @@
 // var tp =0;
 // var popopen =0;
 
+//Verifica los checkbox de los tipos de nodos en el facetado global que esten en check 
+//para agregarlos a la variable tiposN como string y realizar las consultas
 function tipNodos(){
 		tiposN="";
 		checkeado =[];
@@ -24,7 +26,8 @@ function tipNodos(){
 			
 			
 			
-			
+	//Verifica los checkbox de los tipos de relaciones en el facetado global que esten en check 
+//para agregarlos a la variable tiposR como string y realizar las consultas
 	function tipRelaciones(){
 		tiposR="";
 		checkeadoRel =[];
@@ -51,7 +54,7 @@ function tipNodos(){
 	}
 
 
-// función click llama a los vecinos 
+// Detecta un click sobre el nodo para la apertura de nodos  
 
  var doblclic=false;
  
@@ -67,10 +70,12 @@ function unclick(d){
             .attr("r", circleWidth*2);
 							
 			$('#popmodal').modal('show');
-
+		//esconde el tooltip
          tip.hide(d);
+		 //llama las funciones que verifican el facetado global
 			tipNodos();
 			tipRelaciones();
+			//llama a la funcion numVecinos para verificar el numero de vecinos que tiene el nodo 
 			 numVecinos(d.sid);
 			 $("#mi_div3").empty();
 			// console.log("CLick"+tp);

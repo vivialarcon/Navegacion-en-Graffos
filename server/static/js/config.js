@@ -1,5 +1,12 @@
+
+// var enlace="http://200.93.225.47:9014/db/data/cypher"
+// var enlace="/peticion"
+var enlace="http://localhost:7474/db/data/cypher"
+
+//Máximo de nodos para mostrar 
 var totalimite=25;
 
+//Nombres de los Nodos de acuerdo al tipo 
 var etiqueta={};
 
 etiqueta["Alcance"] = "det_alcance_desc";
@@ -24,13 +31,14 @@ etiqueta["Tecnica"] = "nombre";
 etiqueta["UsoSimbolico"] = "det_uso_simbolico_desc";
 
 
-function label(d){
+// function label(d){
 
-label = d[etiqueta[d.label]];
+// label = d[etiqueta[d.label]];
 
-return label;
-}
+// return label;
+// }
 
+//Campos que se muestran en el tooltip de los nodos
 var camp_tooltip ={
 
 "Alcance":["det_alcance_desc"],
@@ -56,6 +64,7 @@ var camp_tooltip ={
 
 }
 
+//Campos que se muestran al abrir toda la informacion 
 var camp_modal ={
 
 "Alcance":["det_alcance_desc","det_alcance"],

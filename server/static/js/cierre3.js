@@ -1,3 +1,4 @@
+//Agrega al array de eliminado el nodo pulsado
 cerrar = function(sid){
  
 	 borrar = [];

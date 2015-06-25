@@ -1,9 +1,11 @@
+
+//Se llama al dar click sobre un nodo para determinar el numero de vecinos que tiene de acuerdo al facetado local 
 function numVecinos(sid){
 
 var consulta5 = 
 	{
 
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +" "+tiposR+" RETURN count(x) ",
+	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +"  RETURN count(x) ",
 	  "params" : {	  }
 	};
 
@@ -18,12 +20,16 @@ var consulta5 =
 	   
 
 			numVeci=data.data[0][0];
+			
+			//Si el numero de nodos vecinos es menor al limite definido se cierra el modal de facetado local y se abren los nodos vecinos
 			if(numVeci <= totalimite){ 
 			$('#popmodal').modal('hide');
-			
+			//NeoPedro
 				pedirVecinos(sid);
 
 			}
+			
+			//Si el numero de vecinos es mayor se llama al facetado local 
 			else{
 			
 			
