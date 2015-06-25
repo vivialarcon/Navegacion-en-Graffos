@@ -68,27 +68,54 @@
 	 
 	 });
 	 
-	 //tooltip guía para los checkbox en el tipo de nodos 
+	 //tooltip guía para el desplegable de tipo de nodos 
 	 $('#titnodos').tooltip({
 	 
 		'html':'true',
 		'placement': 'bottom',
 		//cambiar texto 
-		'title':"<div >Para empezar elija el tipo de dato que va a ingresar</div>"
+		'title':"<div >Puede elegir el tipo de nodos que desea ver durante la navegación</div>"
 					  
        
 	 
 	 });
 	 
-	 
-	 //tooltip guía para el desplegable de tipo de nodos 
+	 //tooltip guía para los checkbox en el tipo de nodos 
 	 $('#collapseOne').tooltip({
 	 
 		'html':'true',
 		'placement': 'bottom',
 		//cambiar texto 
-		'title':"<div >Para empezar elija el tipo de dato que va a ingresar</div>"
+		'title':"<div >Si no desea ver un tipo de nodo lo puede deseleccionar </div>"
 					  
        
 	 
 	 });
+	 
+	 
+	 //tooltip guía para el desplegable de tipo de relaciones 
+	 $('#titRelaciones').tooltip({
+	 
+		'html':'true',
+		'placement': 'bottom',
+		//cambiar texto 
+		'title':"<div >Puede elegir el tipo de relaciones que desea ver durante la navegación</div>"
+					  
+       
+	 
+	 });
+	 
+	 //tooltip guía para los checkbox en el tipo de relaciones 
+	 $('#collapseTwo').tooltip({
+	 
+		'html':'true',
+		'placement': 'bottom',
+		//cambiar texto 
+		'title':"<div >Si no desea ver un tipo de relación lo puede deseleccionar </div>"
+					  
+       
+	 
+	 });
+	 
+	 
+	 
