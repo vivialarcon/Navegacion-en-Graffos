@@ -1,7 +1,7 @@
 
-// var enlace="http://200.93.225.47:9014/db/data/cypher"
+
 var enlace="/peticion"
-// var enlace="http://localhost:7474/db/data/cypher"
+
 
 //Máximo de nodos para mostrar 
 var totalimite=25;
