@@ -1,5 +1,5 @@
-// var tp =0;
-// var popopen =0;
+ var tp =0;
+ var popopen =0;
 
 //Verifica los checkbox de los tipos de nodos en el facetado global que esten en check 
 //para agregarlos a la variable tiposN como string y realizar las consultas
@@ -68,13 +68,15 @@ function unclick(d){
             .duration(250)
             .style("cursor", "pointer")     
             .attr("r", circleWidth*2);
-							
-			$('#popmodal').modal('show');
+				
+			tp++;				
+			// $('#popmodal').modal('show');
 		//esconde el tooltip
          tip.hide(d);
 		 //llama las funciones que verifican el facetado global
 			tipNodos();
 			tipRelaciones();
+			showPopover ();
 			//llama a la funcion numVecinos para verificar el numero de vecinos que tiene el nodo 
 			 numVecinos(d.sid);
 			 $("#mi_div3").empty();
@@ -96,7 +98,8 @@ function dosclick(d){
             .style("cursor", "pointer")
 					
              cerrar(d.sid);
-			
+			$("g").popover('hide');
+             tp = 0;
 		setTimeout(function(){
 		doblclic=false
 		},200);		
@@ -129,25 +132,21 @@ function actualizaGrafo(){
 	
 
 
-		// $("g").modalPopover(
+		$("g").popover(
 		
 		
-		// {
-		
-		// 'html':'true',
-		// 'title':'FACETADO LOCAL',
-			// 'content':"<div id='loader1'><img  src='img/loading.gif'></div><select style='display:none' id='mi_div3' ></select>"+
-					  // "<div style='display:none' id='loader2'><img  src='img/loader.gif'></div></br><select style='display:none' id='miselec'></select>"+
-					  // "<div style='display:none' id='loader3'><img  src='img/loader.gif'></div><div style='display:none' id='mi_div5'></div>"+
-					  // "</br></br><input style='display:none' type='button' id='btnSubmitL' value='Vecinos' /></br></br></br>",
-       
-        // 'placement': 'bottom',
-		 // 'trigger': 'manual'
-    // })
+		{
 	
-	// .focus(showPopover)
-	//.blur(hidePopover);
-	// .hover(hidePopover);
+		'html':'true',
+		'title':'FACETADO LOCAL',
+			'content':"<div id='loader1'><img  src='img/loading.gif'></div><select style='display:none' id='mi_div3' ></select>"+
+					  "<div style='display:none' id='loader2'><img  src='img/loader.gif'></div></br><select style='display:none' id='miselec'></select>"+
+					  "<div style='display:none' id='loader3'><img  src='img/loader.gif'></div><div style='display:none' id='mi_div5'></div>"+
+					  "</br></br><input style='display:none' type='button' id='btnSubmitL' value='Vecinos' /></br></br></br>",
+        'container': 'body',
+        'placement': 'bottom',
+
+    })
 
 		
 	    link = link.data(force.links(), function(d) { return d.source.x +"-"+d.target.x; });
@@ -163,47 +162,27 @@ function actualizaGrafo(){
 		   
 }
 
-
-// var showPopover = function () {
-	// console.log("primer"+tp);
+var showPopover = function () {
+	console.log("primer"+tp);
 	
-	// if(tp == 0)
-	// {
-		// tp=1;
-		// $(this).popover('show');
-		
-		// }
-		// else{  
-		// $(this).popover('hide');
-		 // $(this).popover('show');
-		
-	// }
-	//$("g").popover('hide');
-	// console.log("despues"+tp);
+	if(tp>1){
+	$("g").popover('hide');
+        tp=0;
+	}
+	
+	
   
-// };
+};
 
-// $("body").click(function(e){
-	// console.log(tp);
-	// console.log(e);
-	  // if(tp == 1){
+$("body").click(function(e){
+
 		
-		// if(e.target.localName == "svg" ){
-			// $('#popmodal').modalPopover('hide');
-			// tp = 0;
-		// }
+		if(e.target.localName == "svg" ){
+			$("g").popover('hide');
+            $("[role='tooltip']").popover('hide');
+			tp=0;
+		}
 		
-		// if(tp>=1 && e.target.localName == "circle" ){
-			
-			// $("g").popover('hide');
-			 // tp = 0;
-			// console.log("borrado");
-		
-		// }
-	// tp = 0;
-		// console.log(tp);
-	  // }
-	// else{
-	// tp=0;}
-	// console.log(tp);
-// });
+	
+});
+

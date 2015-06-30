@@ -47,7 +47,7 @@ var consulta =
 			$("#miselec").hide();
 			$("#loader2").hide();
 			
-// tp=0;
+			tp=0;
 // console.log("neo"+tp);
 		},
 		error: function( xhr ) {

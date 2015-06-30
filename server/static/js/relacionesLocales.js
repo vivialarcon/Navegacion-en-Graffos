@@ -132,6 +132,7 @@ var consulta9 =
 		
 		
 		$("g").popover('hide');
+        tp = 0;
 	 });
 		
        },
