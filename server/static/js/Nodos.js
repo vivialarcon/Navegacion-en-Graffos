@@ -42,18 +42,14 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([0, 7])
     .html(
-	function(){
-	var titulo=label;
+
+	function(d){
+	var titulo=datosNodo.join();
 	//limita la cantidad de caracteres que se muestran de la variable
 	titulo= titulo.substring(0,10);
 	//muestra el nombre del nodo en un boton junto con icono de informacion 
 		return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='../static/img/Icono_información.png' class='icono' >"+titulo+"... </button>";
-}
-	// function(d){
-	// var titulo=datosNodo.join();
-	// titulo= titulo.substring(0,10);
-		// return "<button type='text'  class='btn btn-primary btn pull-right' data-toggle='modal' data-target='#myModal' id='leermas'> <img src='../static/img/Icono_información.png' class='icono' >"+titulo+"... </button>";
-	// }
+	}
 	)
 vis.call(tip);
 

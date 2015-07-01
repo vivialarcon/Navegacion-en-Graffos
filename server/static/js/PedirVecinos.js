@@ -42,10 +42,11 @@ var consulta =
 				  
 		   }
 			actualizaGrafo();
-			$("#loader1").show();
-			$("#mi_div3").hide();
-			$("#miselec").hide();
-			$("#loader2").hide();
+			$("g").popover('hide');
+			// $("#loader1").show();
+			// $("#mi_div3").hide();
+			// $("#miselec").hide();
+			// $("#loader2").hide();
 			
 			tp=0;
 // console.log("neo"+tp);

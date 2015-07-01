@@ -43,11 +43,11 @@ var consulta7 =
 				actualizaGrafo();
 				$("g").popover('hide');
 				tp=0;
-				$('#popmodal').modal('hide');
-				$("#mi_div3").hide();
-				$("#loader1").show();
-				$("#loader2").hide();
-				$("#miselec").hide();
+				// $('#popmodal').modal('hide');
+				// $("#mi_div3").hide();
+				// $("#loader1").show();
+				// $("#loader2").hide();
+				// $("#miselec").hide();
 				
 
        },

@@ -121,12 +121,12 @@ var consulta9 =
 				VecinosLocales(pulsa)
 				$("#mi_div3").empty();
 				$("#miselec").empty();
-				$("#miselec").hide();
+				// $("#miselec").hide();
 				$("#mi_div5").empty();
-				$('#btnSubmitL').hide();
-				$("#loader1").show();
-				$("#mi_div3").hide();
-				$("#mi_div5").hide();
+				// $('#btnSubmitL').hide();
+				// $("#loader1").show();
+				// $("#mi_div3").hide();
+				// $("#mi_div5").hide();
 			}
 		
 		

@@ -6,26 +6,26 @@ $("#mi_div6").empty();
 $("#myModalLabel").empty();
 	
 	//Cuando se tiene mas de un campo que mostrar en el tooltip 
-		// for(x=0; x < nodes.length; x++){
+		for(x=0; x < nodes.length; x++){
 		
-			// if(nodes[x].sid == d.sid){
-				// datosNodo=[];
+			if(nodes[x].sid == d.sid){
+				datosNodo=[];
 				
-				// for(t=0; t<camp_tooltip[d.label].length; t++){
+				for(t=0; t<camp_tooltip[d.label].length; t++){
 					
-					// $.map(nodes[x], function(value, key) {
+					$.map(nodes[x], function(value, key) {
 									
-						// if(key==camp_tooltip[d.label][t]){
+						if(key==camp_tooltip[d.label][t]){
 									
-							// datosNodo.push(value);  
+							datosNodo.push(value);  
 									
-						// }
+						}
 
-					// });
+					});
 							
-				// }
-			// }
-		// }
+				}
+			}
+		}
 						
 
  //muestra el tooltip

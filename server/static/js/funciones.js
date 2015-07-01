@@ -139,9 +139,9 @@ function actualizaGrafo(){
 	
 		'html':'true',
 		'title':'FACETADO LOCAL',
-			'content':"<div id='loader1'><img  src='img/loading.gif'></div><select style='display:none' id='mi_div3' ></select>"+
-					  "<div style='display:none' id='loader2'><img  src='img/loader.gif'></div></br><select style='display:none' id='miselec'></select>"+
-					  "<div style='display:none' id='loader3'><img  src='img/loader.gif'></div><div style='display:none' id='mi_div5'></div>"+
+			'content':"<div id='loader1'><img  src='../static/img/loading.gif'></div><select style='display:none' id='mi_div3' ></select>"+
+					  "<div style='display:none' id='loader2'><img  src='../static/img/loader.gif'></div></br><select style='display:none' id='miselec'></select>"+
+					  "<div style='display:none' id='loader3'><img  src='../static/img/loader.gif'></div><div style='display:none' id='mi_div5'></div>"+
 					  "</br></br><input style='display:none' type='button' id='btnSubmitL' value='Vecinos' /></br></br></br>",
         'container': 'body',
         'placement': 'bottom',
