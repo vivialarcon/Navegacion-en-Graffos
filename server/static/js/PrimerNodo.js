@@ -1,18 +1,17 @@
 // las funciones PrimerNodo y Nodo1 llaman al primer nodo que pide el usuario mediante la busqueda 
 
 function PrimerNodo(nodoini){
+	
 var consulta4 = 
 	{
-
-	  "query" : "START n=node("+nodoini+") MATCH n-[re]-x RETURN n, ID(n),count (x) ",
-	  "params" : {	  }
+	  "id" : nodoini
 	};
 	
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta4),
        dataType: "json",
        contentType: "application/json",

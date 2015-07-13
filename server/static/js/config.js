@@ -1,7 +1,7 @@
 
 
 var enlace="/peticion"
-
+var enlace2="/peticion_n"
 
 //Máximo de nodos para mostrar 
 var totalimite=25;
