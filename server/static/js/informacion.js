@@ -1,7 +1,7 @@
 
 //función infoNodos muestra la información del tooltip
 function infoNodos(d){
-
+console.log(d);
 $("#mi_div6").empty();
 $("#myModalLabel").empty();
 	
@@ -30,6 +30,8 @@ $("#myModalLabel").empty();
 
  //muestra el tooltip
 	 tip.show(d);
+	 tip2.show(d, document.getElementById("guia"+d.label));
+
 	
 
 	 //Agrega el nombre del nodo al titulo de la ventana modal 
@@ -71,7 +73,7 @@ setTimeout(function(d){
 tip.hide(d);
 },2000);
 
-
+tip2.hide(d);
 
 
 

@@ -1,5 +1,5 @@
 // Se crea y configura la parte visual mediante la libreria D3js los nodos y relaciones
-
+var guia;
 var color = d3.scale.category20();
 
 var vis = d3.select("body")
@@ -95,19 +95,23 @@ var link = vis.append("g").selectAll(".link")
 // se crea nodos guias con sus atributos 
 function guias(){
 	
-	var guia = vis.selectAll("circle.guia")
+	guia = vis.selectAll("circle.guia")
 	  .data(tiposNodes)
 	  .enter()
 	  .append("svg:circle")
 	  .attr("r",circleWidth)
+	  .attr("id", function(d,i){return "guia"+d.label})
 	  .attr("fill",function(d,i) {return color(d.label)})
 	  .attr("cx", function(d,i) { return (i*30)+20})
       .attr("cy", 30)
-	  .on("mouseover", tip2.show)
+	  .on("mouseover", guiatool)
       .on("mouseout", tip2.hide)  
 
 	  }	 	  
- 
+ function guiatool(d){
+  tip2.show(d);
+
+ }
 	 
 force.on("tick", function(e) {
 

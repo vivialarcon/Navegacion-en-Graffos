@@ -123,6 +123,7 @@ function actualizaGrafo(){
 			.style("cursor", "pointer")  
             .attr("fill", function(d, i) {   return  color(d.label); } )
             .on("mouseover", infoNodos)
+			//.on("mouseover", function(d) { tip2.show(d, document.getElementById("guiaPeriodicidad")) })
             .on("mouseout", ocultarInfo)
 		    .on("click", unclick) 
        	    .on("dblclick", dosclick) 	      
