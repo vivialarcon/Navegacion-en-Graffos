@@ -4,7 +4,10 @@ function PrimerNodo(nodoini){
 	
 var consulta4 = 
 	{
-	  "id" : nodoini
+	  "id" : nodoini,
+	  "dato" : "",
+	  "tnodo" :"",
+	  "trel" : ""
 	};
 	
 
@@ -44,18 +47,19 @@ var consulta4 =
 	 
 	 
 	 function Nodo1(dato,nodoini){
-var consulta11 = 
-	{
-
-	  "query" : "START n=node(*) where n."+dato+"='"+nodoini+"' RETURN n, ID(n) ",
-	  "params" : {	  }
-	};
 	
+	var consulta11 = 
+	{
+	  "id": nodoini,
+	  "dato":dato,
+	  "tnodo" :"",
+	  "trel" : ""
+	};
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta11),
        dataType: "json",
        contentType: "application/json",
