@@ -1,18 +1,9 @@
 
 //Con esta consulta se obtiene todos los tipos de nodos que contiene la base de datos y se los muestra junto a un checkbox para el facetado global 
-/*var consulta2 = 
-	{
-
-	  "query" : "START n=node(*) RETURN distinct labels(n)",
-	  "params" : {	  }
-	};*/
-
 var consulta2 = 
 	{
-	  "id" : "",
-	  "dato" : "",
 	  "tnodo" :"tipo nodos",
-	  "trel" : ""
+	  "consulta" : 2
 	};
 	
 	$.ajax({

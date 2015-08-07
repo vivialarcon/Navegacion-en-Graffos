@@ -1,17 +1,18 @@
 pedirVecinos = function(sid){
-
-
-var consulta = 
+	
+  var consulta = 
 	{
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +" "+tiposR+" RETURN x, ID(x), startnode(re),ID(startnode(re))",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tnodo" :tiposN,
+	  "trel" : tiposR,
+	  "consulta" : 1
 	};
 
 	
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta),
        dataType: "json",
        contentType: "application/json",

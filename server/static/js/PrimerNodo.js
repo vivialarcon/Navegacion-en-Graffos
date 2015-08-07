@@ -5,9 +5,7 @@ function PrimerNodo(nodoini){
 var consulta4 = 
 	{
 	  "id" : nodoini,
-	  "dato" : "",
-	  "tnodo" :"",
-	  "trel" : ""
+	  "consulta" : 4
 	};
 	
 
@@ -52,8 +50,7 @@ var consulta4 =
 	{
 	  "id": nodoini,
 	  "dato":dato,
-	  "tnodo" :"",
-	  "trel" : ""
+	  "consulta" : 11
 	};
 
 	$.ajax({

@@ -1,19 +1,20 @@
 
 //Esta función es llamada para abrir los nodos vecinos cuando el numero de vecinos es menor al maximo definido 
 pedirVecinos = function(sid){
-
-
+	
 var consulta = 
 	{
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +" "+tiposR+" RETURN x, ID(x), startnode(re),ID(startnode(re))",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tnodo" :tiposN,
+	  "trel" : tiposR,
+	  "consulta" : 1
 	};
 
 	
 	$.ajax({
-       async: true, 
+       async: true,
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta),
        dataType: "json",
        contentType: "application/json",

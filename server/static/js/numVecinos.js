@@ -1,18 +1,18 @@
 
 //Se llama al dar click sobre un nodo para determinar el numero de vecinos que tiene de acuerdo al facetado local 
 function numVecinos(sid){
-
+	
 var consulta5 = 
 	{
-
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +"  RETURN count(x) ",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tnodo" :tiposN,
+	  "consulta" : 5
 	};
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta5),
        dataType: "json",
        contentType: "application/json",

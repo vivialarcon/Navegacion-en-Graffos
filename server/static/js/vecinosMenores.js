@@ -2,18 +2,18 @@
 //al elegir un tipo de nodo vecino que tenga igual o menos vecinos que el limite definido.
 
 function VecinosMenor(sid){
-
+	
 var consulta7 = 
 	{
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x  where x:"+nombre+"  RETURN x, ID(x), startnode(re),ID(startnode(re))",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tvecino" :nombre,
+	  "consulta" : 7
 	};
-
 	
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta7),
        dataType: "json",
        contentType: "application/json",

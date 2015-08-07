@@ -3,17 +3,18 @@
 // La consulta realizada nos devuelve el tipo de relaciones que tienen los vecinos de acuerdo al tipo escogido 
 
 function tiporelaLocales(sid){
+
 var consulta8 = 
 	{
-
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x-[r]-(b) WHERE x:"+nombre+" RETURN DISTINCT labels(x), type(r) , labels(b) ",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tvecino":nombre,
+	  "consulta" : 8
 	};
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta8),
        dataType: "json",
        contentType: "application/json",

@@ -1,18 +1,24 @@
 
 //Esta funcion se llama por cada checkbox en check y la consulta devuelve los nodos que cumplan con los datos que se dan en la consulta 
 function VecinosLocales(sid){
-
-var consulta7 = 
+		
+  var consulta7 = 
 	{
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x-[r]-(b) where x:"+nombre+" and b:"+nombreb+" and b."+atributoNombre+"='"+nodoveci+"'  RETURN x, ID(x), startnode(re),ID(startnode(re)) skip "+skip+"  Limit "+limite+"",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tvecino" :nombre,
+	  "atributo" : atributoNombre,
+ 	  "relvecino" : nombreb,
+	  "vecino" : nodoveci,
+	  "salto" : skip,
+	  "limite" : limite,
+	  "consulta" : 10
 	};
 
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta7),
        dataType: "json",
        contentType: "application/json",

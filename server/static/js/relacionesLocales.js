@@ -1,17 +1,19 @@
 
 //Esta consulta obtiene los distintos nodos vecinos del vecinos que tengan la relacion elegida y el número de relaciones que tiene 
 function relacionesLocales(sid){
-var consulta9 = 
-	{
 
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x-[r]-(b) WHERE x:"+nombre+" and b: "+nombreb+" RETURN DISTINCT count (r),b ",
-	  "params" : {	  }
+	var consulta9 = 
+	{
+	  "id" : sid,
+	  "tvecino":nombre,
+	  "relvecino" :nombreb,
+	  "consulta" : 9
 	};
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta9),
        dataType: "json",
        contentType: "application/json",

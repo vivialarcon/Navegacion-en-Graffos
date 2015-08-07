@@ -1,18 +1,10 @@
 
 //Se obtiene todos los tipos de relaciones que contiene la base de datos y los muestra junto a un checkbox para el facetado global 
-/*var consulta3 = 
-	{
-	  "query" : "START r=rel(*) return distinct(type(r))",
-	  
-	  "params" : {	  }
-	};*/
 	
 var consulta3 = 
 	{
-	  "id" : "",
-	  "dato" : "",
-	  "tnodo" :"",
-	  "trel" : "tipo relaciones"
+	  "trel" : "tipo relaciones",
+	  "consulta" : 3
 	};
 
 	$.ajax({

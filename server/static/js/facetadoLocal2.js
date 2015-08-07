@@ -2,18 +2,18 @@
 //Esta funcion es llamada para abrir el facetado local cuando el numero de nodos es mayor a lo establecido 
 //Obtiene todos los tipos de nodos vecinos y el numero de vecinos que tiene cada tipo 	 
 function FacetadoLocal(sid){
-
+	
 var consulta6 = 
 	{
-
-	  "query" : "START n=node("+sid+") MATCH n-[re]-x where "+tiposN +" RETURN  distinct labels(x), count (x)",
-	  "params" : {	  }
+	  "id" : sid,
+	  "tnodo" :tiposN,
+	  "consulta" : 6
 	};
 
 	$.ajax({
        async: true, 
        type: "POST",
-       url: enlace,
+       url: enlace2,
        data: JSON.stringify(consulta6),
        dataType: "json",
        contentType: "application/json",
