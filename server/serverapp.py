@@ -21,7 +21,7 @@ def peticion():
     r= requests.post('http://localhost:9014/db/data/cypher',request.data, auth=(user,passw))
     print r.json()
     return r.text
-	
+	#asdasdasdasd#
 @app.route("/peticion_n", methods =['GET','POST'])
 def peticion_n():
 	c=json.loads(request.data)
